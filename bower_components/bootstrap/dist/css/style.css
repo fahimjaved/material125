@@ -1,0 +1,21 @@
+/* CSS Document */
+.account a.dropdown-toggle.ng-binding {
+    padding: 0px;
+}
+@media only screen and (max-width:892px) {
+	
+	.navbar-inverse .ng-binding {
+    padding: 15px 7px !important;
+}
+	
+		
+	}
+.form-group .help-block {
+  display: none;
+}
+ 
+.form-group.has-error .help-block {
+  display: block;
+}	
+
+.clearfix{ clear:both}

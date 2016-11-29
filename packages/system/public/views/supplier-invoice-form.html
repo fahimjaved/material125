@@ -1,0 +1,88 @@
+<section data-ng-controller="SupplierInvoiceController">
+<script src="/bower_components/bootstrap/dist/js/jquery.datetimepicker.full.js"></script>
+  <h1 mean-token="'home-default'">Supplier Invoice Form
+ 
+  </h1>
+  <div class="bs-example" data-ng-show="global.authenticated" data-example-id="simple-table">
+  <div class="col-lg-12">
+   <form ref='uploadForm' 
+            id='uploadForm' 
+            action='/supplierinvoice/invoice' 
+            method='post' 
+            encType="multipart/form-data" name="myForm" >
+            
+             <div class="col-lg-6 col-md-6 col-sm-6">
+             <div class="form-group" >
+            <label class="control-label">Material Name</label>
+            <input type="text" class="form-control" name="material_name" id="material_name"  placeholder="Name" ng-model="user.material_name"  required />
+            
+            </div>
+            </div>
+             <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+             <div class="form-group" >
+             <label class="control-label">Select Date</label>
+                <input type="text" class="form-control" name="date_added" ng-model="user.date_added"   value="" id="datetimepicker" required />
+                </div>
+                </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 clearfix" data-ng-show="editit">
+          <div class="form-group"> 
+          <label class="control-label">Already uploaded file</label> 
+         <label class="btn btn-default btn-file pull-right">
+         <a target="_blank" href="http://material125-legitaccess.rhcloud.com/images/{{user.document_added}}">View File</a>
+         <input type="hidden" name="pr_doc" value="{{user.document_added}}" />
+   <!-- <input type="text" name="file_uploaded" ng-model="user.document_added" readonly="readonly"  style="border:none">-->
+</label> 
+<p >Please Upload new file below to replace</p> 
+ 
+</div>
+</div>
+
+                
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6 clearfix"  >
+          <div class="form-group" > 
+          <label class="control-label">Add Document</label> 
+         <label class="btn btn-default btn-file pull-right">
+         <div ng-if="editit==false">
+    <input type="file" name="document_added"  required />
+    </div>
+    <div ng-if="editit==true">
+    <input type="file" name="document_added"   />
+    </div>
+    
+</label>  
+ 
+</div>
+</div>
+                
+                
+               <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+<div class="form-group" >
+                
+                <label class="control-label">Ready/Not Ready</label>
+        <select class="form-control" name="ready_state"  required  ng-model="user.ready_state"><option>Ready</option>
+        <option>Not Ready</option>
+        </select>
+        <div ng-if="editit==true">
+        <input type="hidden" name="edit_id" value="{{user.edit_id}}"  />
+        </div>
+              </div>
+              </div>  
+              <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+                <input  class="btn btn-primary" type='submit' value='Submit' />
+                </div>
+        </form>
+    
+ <script type="text/javascript">
+	  $('#datetimepicker').datetimepicker({
+dayOfWeekStart : 1,
+lang:'en',
+disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
+startDate:new Date(),
+defaultDate:new Date()
+});
+//$('#datetimepicker').datetimepicker({value:'2015/10/01 00:00',step:10});</script>   
+</div>
+ </div>
+</section>

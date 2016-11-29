@@ -1,0 +1,53 @@
+ <script type="text/javascript" src="/bower_components/bootstrap/dist/js/tableExport.js"></script>
+ <script type="text/javascript" src="/bower_components/bootstrap/dist/js/jquery.base64.js"></script>
+ <script type="text/javascript" src="/bower_components/bootstrap/dist/js/jspdf/libs/sprintf.js"></script>
+ <script type="text/javascript" src="/bower_components/bootstrap/dist/js/jspdf/jspdf.js"></script>
+ <script type="text/javascript" src="/bower_components/bootstrap/dist/js/jspdf/libs/base64.js"></script>
+ 
+<section data-ng-controller="OverviewController">
+ 
+  <h1 data-ng-show="global.authenticated" mean-token="'home-default'">Overview Page
+ 
+  </h1>
+  <div class="bs-example" data-ng-show="global.authenticated" data-example-id="simple-table"> 
+<div class="col-lg-9 col-md-9 col-sm-9">
+   <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+
+        <input type="text" class="form-control" placeholder="Search Material" ng-model="searchMaterial">
+
+      </div>      
+    </div>
+  </form>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3">
+  <button type="button" onClick ="$('#dwd').tableExport({type:'pdf',escape:'false'});" class="btn btn-success">Download PDF</button>
+<button type="button" onClick ="$('#dwd').tableExport({type:'excel',escape:'false'});" class="btn btn-success">Download Excel</button>
+  </div>
+  <table class="table" id="dwd"> <tbody> 
+ 
+  
+  <tr ng-repeat="material in materials  | filter:searchMaterial">
+        <td>{{ material.sr }}</td>
+        <td>{{ material.name }}</td>
+        <td>{{ material.count }}</td>
+        <td>{{ material.material }}</td>
+        <td><span class="glyphicon {{ material.tick }}"></span></td>
+        <td>{{ material.ready }}</td>
+      </tr>
+  
+  </tbody></table>
+  
+  
+  
+  
+  
+  </div>   
+
+
+
+
+  
+  </section>

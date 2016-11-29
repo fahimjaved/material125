@@ -1,0 +1,55 @@
+<section data-ng-controller="SupplierInvoiceController">
+<script src="/bower_components/bootstrap/dist/js/jquery.datetimepicker.full.js"></script>
+  <h1 mean-token="'home-default'">Supplier Invoice Form
+ 
+  </h1>
+  <div class="bs-example" data-ng-show="global.authenticated" data-example-id="simple-table">
+  <div class="col-lg-12">
+   <form ref='uploadForm' 
+            id='uploadForm' 
+            action='/supplierinvoice/invoice' 
+            method='post' 
+            encType="multipart/form-data" name="myForm" onsubmit="validate();">
+            
+             <div class="col-lg-6 col-md-6 col-sm-6">
+             <div class="form-group" >
+            <label class="control-label">Material Name</label>
+            <input type="text" class="form-control" name="material_name" id="material_name"  placeholder="Name"  required />
+            <span id="material_name">The name is required.</span>
+            </div>
+            </div>
+             <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+             <div class="form-group" >
+             <label class="control-label">Select Date</label>
+                <input type="text" class="form-control" name="date_added"   value="" id="datetimepicker" required />
+                </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-6 clearfix"  >
+          <div class="form-group" > 
+          <label class="control-label">Add Document</label> 
+         <label class="btn btn-default btn-file pull-right">
+    <input type="file" name="document_added" required />
+</label>  
+ 
+</div>
+</div>
+                
+                
+               <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+<div class="form-group" >
+                
+                <label class="control-label">Ready/Not Ready</label>
+        <select class="form-control" name="ready_state"  required><option>Ready</option>
+        <option>Not Ready</option>
+        </select>
+              </div>
+              </div>  
+              <div class="col-lg-6 col-md-6 col-sm-6 clearfix">
+                <input  class="btn btn-primary" type='submit' value='Submit' />
+                </div>
+        </form>
+</div>
+
+ </div>
+</section>

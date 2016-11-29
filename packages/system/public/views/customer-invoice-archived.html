@@ -1,0 +1,19 @@
+<section data-ng-controller="CustomerArchiveController">
+
+  <h1 mean-token="'home-default'">Customer Invoice Archived Page
+ 
+  </h1>
+ 
+  <!-- <a mean-token="supplier-invoice-form" ui-sref='supplier-invoice-form'>Add Supplier invoice</a>-->
+  <div class="bs-example" data-ng-show="global.authenticated" data-example-id="simple-table">
+   <table class="table"> <caption><!--Optional table caption.--></caption> <thead> 
+   <tr>  <th>Material Name</th> <th>Date Added</th> <th>State</th> <th>Document</th> <th>Edit/Delete</th> 
+   </tr> </thead>
+    <tbody>
+     <tr ng-repeat="sinvoice in sinvoices">  <td>{{sinvoice.material_name}}</td> <td>{{sinvoice.date_added}}</td> 
+     <td>{{sinvoice.ready_state}}</td><td><a target="_blank" href="http://material125-legitaccess.rhcloud.com/images/{{sinvoice.document_added}}"><img src="/bower_components/bootstrap/images/icons/{{sinvoice.filetype}}" class="img-responsive"  style="max-width: 25px;" /></a></td> 
+     <td><button type="button" ng-click="restore(sinvoice._id)" class="btn btn-info">Restore</button>  <button type="button" ng-click="remove(sinvoice._id)" class="btn btn-danger">Delete</button></td>
+   </tr> 
+   
+    </tbody> </table> </div>
+</section>
