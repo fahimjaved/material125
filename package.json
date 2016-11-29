@@ -8,7 +8,7 @@
     "name": "Fahim Javed",
     "mail": "fahim_javed@hotmail.com"
   }],
-  "mean": "0.4.0",
+  "mean": "*",
   "repository": {
     "type": "git",
     "url": "https://github.com/linnovate/mean.git"
@@ -39,9 +39,9 @@
     "express-session": "^1.1.0",
     "express-validator": "^2.1.1",
     "lodash": "^2.4.1",
-    "meanio": "*",
+    "meanio": "~0.5.10",
     "method-override": "^1.0.0",
-    "mongoose": "4.7.0",
+    "mongoose": "4.2.7",
     "morgan": "^1.0.0",
     "nodemailer": "~0.7.0",
     "passport": "^0.2.0",
