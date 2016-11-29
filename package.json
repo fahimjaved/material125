@@ -1,14 +1,14 @@
 {
   "name": "mean",
   "description": "Material125",
-  "version": "*",
+  "version": "0.7.0",
   "private": false,
   "author": "Fahim Javed <fahim_javed@hotmail.com>",
   "contributors": [{
     "name": "Fahim Javed",
     "mail": "fahim_javed@hotmail.com"
   }],
-  "mean": "*",
+  "mean": "0.7.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/linnovate/mean.git"
