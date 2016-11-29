@@ -54,7 +54,8 @@
     "serve-favicon": "*",
     "swig": "*",
     "time-grunt": "*",
-    "view-helpers": "*"
+    "view-helpers": "*",
+    "gridfs-stream":"*"
   },
   "devDependencies": {
     "requirejs": "^2.1.11",
