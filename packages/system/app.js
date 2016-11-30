@@ -9,7 +9,7 @@ var Module = require('meanio').Module,
   
   var bodyParser = require('body-parser');
 var multer = require('multer'); // v1.0.5
-var upload = multer({ dest: 'uploads/' });
+var upload = multer({ dest: '/files' });
  var type = upload.single('document_added');
  
  var fs = require('fs');
