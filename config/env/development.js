@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://fahim:Testing12@ec2-35-160-199-169.us-west-2.compute.amazonaws.com:27017/material125',
+  db: 'mongodb://newfahim:newTesting12@ec2-35-160-199-169.us-west-2.compute.amazonaws.com:27017/material125',
   /**
+  mongodb://{NEW USERNAME}:{NEW PASSWORD}@{EC2 URL}:{PORT}/dummyDB
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
    * See http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options
