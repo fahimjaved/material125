@@ -158,7 +158,7 @@ res.json(sinvoices);
 		
 		SinvoiceModel.findById(req.params.id,function(err,sinvoice){
 		
-		var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+ sinvoice.document_added;
+		var newPath = '/files/'+ sinvoice.document_added;
 		fs.unlink(newPath);
 		
 		SinvoiceModel.remove({_id:req.params.id},function(err,sinvoice){
@@ -196,7 +196,7 @@ app.get('/supplierinvoice/restore/:id',function(req,res){
 		
 		});		
 		
-app.use('/images', express.static(process.env.OPENSHIFT_DATA_DIR+'/files'));
+app.use('/images', express.static('/files'));
 
 app.post('/supplierinvoice/invoice',type,function(req,res){
 	
@@ -208,7 +208,7 @@ if(req.body.edit_id){
   // ...
   var rand=Math.random() * (100000 - 100) + 100;
   rand=Math.floor(rand);
-  var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+rand+ req.file.originalname;
+  var newPath = '/files/'+rand+ req.file.originalname;
   fs.writeFile(newPath, data, function (err) {
 	  
 	  req.body.document_added=rand+req.file.originalname;
@@ -254,7 +254,7 @@ if(req.body.edit_id){
   // ...
   var rand=Math.random() * (100000 - 100) + 100;
   rand=Math.floor(rand);
-  var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+rand+ req.file.originalname;
+  var newPath = '/files/'+rand+ req.file.originalname;
   fs.writeFile(newPath, data, function (err) {
 	  req.body.document_added=rand+req.file.originalname;
 	   req.body.archived='No';
@@ -316,7 +316,7 @@ app.get('/customerinvoice/remove/:id',function(req,res){
 		
 		CinvoiceModel.findById(req.params.id,function(err,cinvoice){
 		
-		var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+ cinvoice.document_added;
+		var newPath = '/files/'+ cinvoice.document_added;
 		fs.unlink(newPath);
 		
 		CinvoiceModel.remove({_id:req.params.id},function(err,cinvoice){
@@ -366,7 +366,7 @@ if(req.body.edit_id){
   // ...
   var rand=Math.random() * (100000 - 100) + 100;
   rand=Math.floor(rand);
-  var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+rand+ req.file.originalname;
+  var newPath = '/files/'+rand+ req.file.originalname;
   fs.writeFile(newPath, data, function (err) {
 	  
 	 req.body.document_added=rand+req.file.originalname;
@@ -412,7 +412,7 @@ if(req.body.edit_id){
   // ...
   var rand=Math.random() * (100000 - 100) + 100;
   rand=Math.floor(rand);
-  var newPath = process.env.OPENSHIFT_DATA_DIR +'/files/'+rand+ req.file.originalname;
+  var newPath = '/files/'+rand+ req.file.originalname;
   fs.writeFile(newPath, data, function (err) {
 	  req.body.document_added=rand+req.file.originalname;
 	   req.body.archived='No';

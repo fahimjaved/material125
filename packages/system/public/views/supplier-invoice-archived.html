@@ -11,7 +11,7 @@
    </tr> </thead>
     <tbody>
      <tr ng-repeat="sinvoice in sinvoices">  <td>{{sinvoice.material_name}}</td> <td>{{sinvoice.date_added}}</td> 
-     <td>{{sinvoice.ready_state}}</td><td><a target="_blank" href="http://material125-legitaccess.rhcloud.com/images/{{sinvoice.document_added}}"><img src="/bower_components/bootstrap/images/icons/{{sinvoice.filetype}}" class="img-responsive"  style="max-width: 25px;" /></a></td> 
+     <td>{{sinvoice.ready_state}}</td><td><a target="_blank" href="/images/{{sinvoice.document_added}}"><img src="/bower_components/bootstrap/images/icons/{{sinvoice.filetype}}" class="img-responsive"  style="max-width: 25px;" /></a></td> 
      <td><button type="button" ng-click="restore(sinvoice._id)" class="btn btn-info">Restore</button>  <button type="button" ng-click="remove(sinvoice._id)" class="btn btn-danger">Delete</button></td>
    </tr> 
    
