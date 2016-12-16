@@ -35,8 +35,8 @@ module.exports = {
     name: 'Material125'
   },
   facebook: {
-    clientID: 'APP_ID',
-    clientSecret: 'APP_SECRET',
+    clientID: '1724330344550396',
+    clientSecret: '537530fb270edc35a51ee8e03ea0e0d3',
     callbackURL: 'http://ec2-35-160-199-169.us-west-2.compute.amazonaws.com:3001/auth/facebook/callback'
   },
   twitter: {
