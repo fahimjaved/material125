@@ -11,7 +11,7 @@ module.exports = {
    */
   http: {
 	port: 3001,
-  },/*,
+  },
   hostname: process.env.OPENSHIFT_NODEJS_IP,
   dbOptions: {
     /*
@@ -29,8 +29,8 @@ module.exports = {
       w: 1,
       numberOfRetries: 2
     }
-    
-  },*/
+    */
+  },
   app: {
     name: 'Material125'
   },
