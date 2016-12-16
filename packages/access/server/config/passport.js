@@ -104,7 +104,7 @@ module.exports = function(passport) {
         user = new User({
           name: profile.displayName,
        //   email: profile.emails[0].value,
-          username: profile.username || profile.emails[0].value.split('@')[0],
+        //  username: profile.username || profile.emails[0].value.split('@')[0],
           provider: 'facebook',
           facebook: profile._json,
           roles: ['authenticated']
