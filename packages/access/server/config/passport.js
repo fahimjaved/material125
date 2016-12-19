@@ -101,12 +101,18 @@ module.exports = function(passport) {
         if (user) {
           return done(err, user);
         }
+		if(profile.emails[0].value){
+			
+			}
+			else{
+				profile.emails[0].value='test@facebook.com';
+				}
         user = new User({
           name: profile.displayName,
-         // email: profile.emails[0].value,
-          //username: profile.username || profile.emails[0].value.split('@')[0],
-		  email: 'test@gmail.com',
-          username: profile.username || 'test@gmail.com',
+          email: profile.emails[0].value,
+          username: profile.username || profile.emails[0].value.split('@')[0],
+		 // email: 'test@gmail.com',
+          //username: profile.username || 'test@gmail.com',
           provider: 'facebook',
           facebook: profile._json,
           roles: ['authenticated']
