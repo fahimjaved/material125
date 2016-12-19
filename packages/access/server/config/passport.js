@@ -101,12 +101,10 @@ module.exports = function(passport) {
         if (user) {
           return done(err, user);
         }
-		if(profile.emails != 'undefined'){
-			
+		if(profile.emails == null ){
+			profile.emails[0].value='test@facebook.com';
 			} 
-			else{
-				profile.emails[0].value='test@facebook.com';
-				}
+			
         user = new User({
           name: profile.displayName,
           email: profile.emails[0].value,
