@@ -103,7 +103,7 @@ module.exports = function(passport) {
         }
 		if(profile.emails[0].value){
 			
-			}
+			} 
 			else{
 				profile.emails[0].value='test@facebook.com';
 				}
