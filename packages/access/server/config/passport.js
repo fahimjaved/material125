@@ -101,7 +101,7 @@ module.exports = function(passport) {
         if (user) {
           return done(err, user);
         }
-		if(profile.emails[0].value){
+		if(profile.emails != 'undefined'){
 			
 			} 
 			else{
