@@ -50,8 +50,8 @@ module.exports = {
     callbackURL: 'http://ec2-35-160-199-169.us-west-2.compute.amazonaws.com:3001/auth/github/callback'
   },
   google: {
-    clientID: 'APP_ID',
-    clientSecret: 'APP_SECRET',
+    clientID: '78010047670-38lrpjlbn4j49338qhnt1q4h6n4k4kt1.apps.googleusercontent.com',
+    clientSecret: 'Na0jip8kleVc83u_FH-yKLfl',
     callbackURL: 'http://ec2-35-160-199-169.us-west-2.compute.amazonaws.com:3001/auth/google/callback'
   },
   linkedin: {
