@@ -15,7 +15,7 @@ var mongoose = require('mongoose'),
  * Auth callback
  */
 exports.authCallback = function(req, res) {
-  res.redirect('/');
+  res.redirect('/#!/');
 };
 
 /**
